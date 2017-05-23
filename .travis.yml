@@ -8,14 +8,12 @@ android:
     - tools
     - tools
 env: 
-  - PLATFORM=android-4.4 SKIP_APPIUM="--skipAppiumTests"
-  - PLATFORM=android-5.1 SKIP_APPIUM="--skipAppiumTests"
-  - PLATFORM=android-6.0 SKIP_APPIUM="--skipAppiumTests"
-  - PLATFORM=android-7.0 SKIP_APPIUM="--skipAppiumTests"
   - PLATFORM=android-4.4
   - PLATFORM=android-5.1
   - PLATFORM=android-6.0
   - PLATFORM=android-7.0
+  - SKIP_APPIUM="--skipMainTests"
+  - SKIP_APPIUM="--skipAppium"
 
 before_install:
   - npm cache clean -f
