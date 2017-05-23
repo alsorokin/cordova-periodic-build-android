@@ -103,7 +103,6 @@ before_install:
 
 install:
   - git clone https://github.com/apache/cordova-paramedic /tmp/paramedic && pushd /tmp/paramedic && npm install && popd
-  - npm install
   - npm install -g cordova@nightly
 
 script:
