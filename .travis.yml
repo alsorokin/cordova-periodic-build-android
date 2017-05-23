@@ -1,0 +1,32 @@
+sudo: false
+os: linux
+language: android
+node_js: "4.2"
+jdk: oraclejdk8
+android:
+  components:
+    - tools
+    - tools
+env: 
+  - PLATFORM=android-4.4 SKIP_APPIUM="--skipAppiumTests"
+  - PLATFORM=android-5.1 SKIP_APPIUM="--skipAppiumTests"
+  - PLATFORM=android-6.0 SKIP_APPIUM="--skipAppiumTests"
+  - PLATFORM=android-7.0 SKIP_APPIUM="--skipAppiumTests"
+  - PLATFORM=android-4.4
+  - PLATFORM=android-5.1
+  - PLATFORM=android-6.0
+  - PLATFORM=android-7.0
+
+before_install:
+  - npm cache clean -f
+  - npm install -g n
+  - node --version
+  - gradle --version
+  - echo y | android update sdk -u --filter android-22,android-23,android-24,android-25
+  - PLUGINS_ARG="--plugin cordova-plugin-camera@https://github.com/apache/cordova-plugin-camera --plugin cordova-plugin-contacts@https://github.com/apache/cordova-plugin-contacts --plugin cordova-plugin-device@https://github.com/apache/cordova-plugin-device --plguin cordova-plugin-device-motion@https://github.com/apache/cordova-plugin-device-motion --plugin cordova-plugin-device-orientation@https://github.com/apache/cordova-plugin-device-orientation --plguin cordova-plugin-file@https://github.com/apache/cordova-plugin-file --plugin cordova-plugin-file-transfer@https://github.com/apache/cordova-plugin-file-transfer --plugin cordova-plugin-geolocation@https://github.com/apache/cordova-plugin-geolocation --plugin cordova-plugin-inappbrowser@https://github.com/apache/cordova-plugin-inappbrowser --plugin cordova-plugin-media@https://github.com/apache/cordova-plugin-media --plugin cordova-plugin-media-capture@https://github.com/apache/cordova-plugin-media-capture --plugin cordova-plugin-network-information@https://github.com/apache/cordova-plugin-network-information --plugin cordova-plugin-splashscreen@https://github.com/apache/cordova-plugin-splashscreen --plugin cordova-plugin-statusbar@https://github.com/apache/cordova-plugin-statusbar --plugin cordova-plugin-vibration@https://github.com/apache/cordova-plugin-vibration --plugin cordova-plugin-vibration@https://github.com/apache/cordova-plugin-vibration"
+  - FTS_ARG="--fileTransferServer http://sheltered-retreat-43956.herokuapp.com"
+  - npm install
+  - npm install -g cordova
+
+script:
+  - node main.js --config pr/$PLATFORM $PLUGINS_ARG $FTS_ARG --shouldUseSauce --buildName travis-periodic-$TRAVIS_JOB_NUMBER $SKIP_APPIUM
