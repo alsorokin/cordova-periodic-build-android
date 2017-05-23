@@ -8,91 +8,90 @@ android:
     - tools
     - tools
 env: 
-  matrix:
-    # android 4.4
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-console@https://github.com/apache/cordova-plugin-console
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-device@https://github.com/apache/cordova-plugin-device
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-media-capture@https://github.com/apache/cordova-plugin-media-capture
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-camera@https://github.com/apache/cordova-plugin-camera
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-network-information@https://github.com/apache/cordova-plugin-network-information
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-device-motion@https://github.com/apache/cordova-plugin-device-motion
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-vibration@https://github.com/apache/cordova-plugin-vibration
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-statusbar@https://github.com/apache/cordova-plugin-statusbar
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-globalization@https://github.com/apache/cordova-plugin-globalization
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-device-orientation@https://github.com/apache/cordova-plugin-device-orientation
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-battery-status@https://github.com/apache/cordova-plugin-battery-status
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-contacts@https://github.com/apache/cordova-plugin-contacts
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-media@https://github.com/apache/cordova-plugin-media
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-geolocation@https://github.com/apache/cordova-plugin-geolocation
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-dialogs@https://github.com/apache/cordova-plugin-dialogs
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-inappbrowser@https://github.com/apache/cordova-plugin-inappbrowser
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-file@https://github.com/apache/cordova-plugin-file
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-file-transfer@https://github.com/apache/cordova-plugin-file-transfer
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-splashscreen@https://github.com/apache/cordova-plugin-splashscreen
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-screen-orientation@https://github.com/apache/cordova-plugin-screen-orientation
-    # android 5.1
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-console@https://github.com/apache/cordova-plugin-console
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-device@https://github.com/apache/cordova-plugin-device
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-media-capture@https://github.com/apache/cordova-plugin-media-capture
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-camera@https://github.com/apache/cordova-plugin-camera
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-network-information@https://github.com/apache/cordova-plugin-network-information
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-device-motion@https://github.com/apache/cordova-plugin-device-motion
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-vibration@https://github.com/apache/cordova-plugin-vibration
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-statusbar@https://github.com/apache/cordova-plugin-statusbar
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-globalization@https://github.com/apache/cordova-plugin-globalization
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-device-orientation@https://github.com/apache/cordova-plugin-device-orientation
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-battery-status@https://github.com/apache/cordova-plugin-battery-status
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-contacts@https://github.com/apache/cordova-plugin-contacts
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-media@https://github.com/apache/cordova-plugin-media
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-geolocation@https://github.com/apache/cordova-plugin-geolocation
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-dialogs@https://github.com/apache/cordova-plugin-dialogs
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-inappbrowser@https://github.com/apache/cordova-plugin-inappbrowser
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-file@https://github.com/apache/cordova-plugin-file
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-file-transfer@https://github.com/apache/cordova-plugin-file-transfer
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-splashscreen@https://github.com/apache/cordova-plugin-splashscreen
-    - PLATFORM=android-5.1 PLUGIN=cordova-plugin-screen-orientation@https://github.com/apache/cordova-plugin-screen-orientation
-    # android 6.0
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-console@https://github.com/apache/cordova-plugin-console
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-device@https://github.com/apache/cordova-plugin-device
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-media-capture@https://github.com/apache/cordova-plugin-media-capture
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-camera@https://github.com/apache/cordova-plugin-camera
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-network-information@https://github.com/apache/cordova-plugin-network-information
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-device-motion@https://github.com/apache/cordova-plugin-device-motion
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-vibration@https://github.com/apache/cordova-plugin-vibration
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-statusbar@https://github.com/apache/cordova-plugin-statusbar
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-globalization@https://github.com/apache/cordova-plugin-globalization
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-device-orientation@https://github.com/apache/cordova-plugin-device-orientation
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-battery-status@https://github.com/apache/cordova-plugin-battery-status
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-contacts@https://github.com/apache/cordova-plugin-contacts
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-media@https://github.com/apache/cordova-plugin-media
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-geolocation@https://github.com/apache/cordova-plugin-geolocation
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-dialogs@https://github.com/apache/cordova-plugin-dialogs
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-inappbrowser@https://github.com/apache/cordova-plugin-inappbrowser
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-file@https://github.com/apache/cordova-plugin-file
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-file-transfer@https://github.com/apache/cordova-plugin-file-transfer
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-splashscreen@https://github.com/apache/cordova-plugin-splashscreen
-    - PLATFORM=android-6.0 PLUGIN=cordova-plugin-screen-orientation@https://github.com/apache/cordova-plugin-screen-orientation
-    # android 7.0
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-console@https://github.com/apache/cordova-plugin-console
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-device@https://github.com/apache/cordova-plugin-device
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-media-capture@https://github.com/apache/cordova-plugin-media-capture
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-camera@https://github.com/apache/cordova-plugin-camera
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-network-information@https://github.com/apache/cordova-plugin-network-information
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-device-motion@https://github.com/apache/cordova-plugin-device-motion
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-vibration@https://github.com/apache/cordova-plugin-vibration
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-statusbar@https://github.com/apache/cordova-plugin-statusbar
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-globalization@https://github.com/apache/cordova-plugin-globalization
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-device-orientation@https://github.com/apache/cordova-plugin-device-orientation
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-battery-status@https://github.com/apache/cordova-plugin-battery-status
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-contacts@https://github.com/apache/cordova-plugin-contacts
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-media@https://github.com/apache/cordova-plugin-media
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-geolocation@https://github.com/apache/cordova-plugin-geolocation
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-dialogs@https://github.com/apache/cordova-plugin-dialogs
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-inappbrowser@https://github.com/apache/cordova-plugin-inappbrowser
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-file@https://github.com/apache/cordova-plugin-file
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-file-transfer@https://github.com/apache/cordova-plugin-file-transfer
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-splashscreen@https://github.com/apache/cordova-plugin-splashscreen
-    - PLATFORM=android-7.0 PLUGIN=cordova-plugin-screen-orientation@https://github.com/apache/cordova-plugin-screen-orientation
+  # android 4.4
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-console
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-device
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-media-capture
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-camera
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-network-information
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-device-motion
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-vibration
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-statusbar
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-globalization
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-device-orientation
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-battery-status
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-contacts
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-media
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-geolocation
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-dialogs
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-inappbrowser
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-file
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-file-transfer
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-splashscreen
+  - PLATFORM=android-4.4 PLUGIN=cordova-plugin-screen-orientation
+  # android 5.1
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-console
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-device
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-media-capture
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-camera
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-network-information
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-device-motion
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-vibration
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-statusbar
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-globalization
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-device-orientation
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-battery-status
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-contacts
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-media
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-geolocation
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-dialogs
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-inappbrowser
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-file
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-file-transfer
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-splashscreen
+  - PLATFORM=android-5.1 PLUGIN=cordova-plugin-screen-orientation
+  # android 6.0
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-console
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-device
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-media-capture
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-camera
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-network-information
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-device-motion
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-vibration
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-statusbar
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-globalization
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-device-orientation
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-battery-status
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-contacts
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-media
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-geolocation
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-dialogs
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-inappbrowser
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-file
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-file-transfer
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-splashscreen
+  - PLATFORM=android-6.0 PLUGIN=cordova-plugin-screen-orientation
+  # android 7.0
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-console
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-device
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-media-capture
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-camera
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-network-information
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-device-motion
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-vibration
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-statusbar
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-globalization
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-device-orientation
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-battery-status
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-contacts
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-media
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-geolocation
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-dialogs
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-inappbrowser
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-file
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-file-transfer
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-splashscreen
+  - PLATFORM=android-7.0 PLUGIN=cordova-plugin-screen-orientation
 
 before_install:
   - npm cache clean -f
@@ -102,11 +101,13 @@ before_install:
   - echo y | android update sdk -u --filter android-22,android-23,android-24,android-25
 
 install:
-  - git clone https://github.com/apache/cordova-paramedic /tmp/paramedic && pushd /tmp/paramedic && npm install && popd
+  - git clone --depth=1 --branch=master https://github.com/apache/cordova-paramedic /tmp/paramedic && pushd /tmp/paramedic && npm install && popd
   - npm install -g cordova@nightly
+  - git clone --depth=1 --branch=master https://github.com/apache/$PLUGIN /tmp/$PLUGIN
 
 script:
-  - PLUGINS_ARG="--plugin cordova-plugin-camera@https://github.com/apache/cordova-plugin-camera --plugin cordova-plugin-contacts@https://github.com/apache/cordova-plugin-contacts --plugin cordova-plugin-device@https://github.com/apache/cordova-plugin-device --plguin cordova-plugin-device-motion@https://github.com/apache/cordova-plugin-device-motion --plugin cordova-plugin-device-orientation@https://github.com/apache/cordova-plugin-device-orientation --plguin cordova-plugin-file@https://github.com/apache/cordova-plugin-file --plugin cordova-plugin-file-transfer@https://github.com/apache/cordova-plugin-file-transfer --plugin cordova-plugin-geolocation@https://github.com/apache/cordova-plugin-geolocation --plugin cordova-plugin-inappbrowser@https://github.com/apache/cordova-plugin-inappbrowser --plugin cordova-plugin-media@https://github.com/apache/cordova-plugin-media --plugin cordova-plugin-media-capture@https://github.com/apache/cordova-plugin-media-capture --plugin cordova-plugin-network-information@https://github.com/apache/cordova-plugin-network-information --plugin cordova-plugin-splashscreen@https://github.com/apache/cordova-plugin-splashscreen --plugin cordova-plugin-statusbar@https://github.com/apache/cordova-plugin-statusbar --plugin cordova-plugin-vibration@https://github.com/apache/cordova-plugin-vibration --plugin cordova-plugin-vibration@https://github.com/apache/cordova-plugin-vibration"
+  - PLUGINS_ARG="--plugin /tmp/$PLUGIN"
   - FTS_ARG="--fileTransferServer http://sheltered-retreat-43956.herokuapp.com"
+  # run general tests and Appium tests separately for easier result identification
   - node /tmp/paramedic/main.js --config pr/$PLATFORM $PLUGINS_ARG $FTS_ARG --shouldUseSauce --buildName travis-periodic-$TRAVIS_JOB_NUMBER --skipAppium
-  - node /tmp/paramedic/main.js --config pr/$PLATFORM $PLUGINS_ARG $FTS_ARG --shouldUseSauce --buildName travis-periodic-$TRAVIS_JOB_NUMBER --skipMainTests
+  - if [ PLUGIN = cordova-plugin-camera -o PLUGIN = cordova-plugin-contacts ]; then node /tmp/paramedic/main.js --config pr/$PLATFORM $PLUGINS_ARG $FTS_ARG --shouldUseSauce --buildName travis-periodic-$TRAVIS_JOB_NUMBER --skipMainTests; fi
