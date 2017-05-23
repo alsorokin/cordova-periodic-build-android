@@ -6,15 +6,24 @@ android:
   components:
     - tools
     - tools
+    - extra-android-m2repository
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+    - $HOME/.android/build-cache
 env:
   global:
     - TRAVIS_NODE_VERSION=4
   matrix:
     # android 4.4
+    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-camera
     - PLATFORM=android-4.4 PLUGIN=cordova-plugin-console
     - PLATFORM=android-4.4 PLUGIN=cordova-plugin-device
     - PLATFORM=android-4.4 PLUGIN=cordova-plugin-media-capture
-    - PLATFORM=android-4.4 PLUGIN=cordova-plugin-camera
     - PLATFORM=android-4.4 PLUGIN=cordova-plugin-network-information
     - PLATFORM=android-4.4 PLUGIN=cordova-plugin-device-motion
     - PLATFORM=android-4.4 PLUGIN=cordova-plugin-vibration
