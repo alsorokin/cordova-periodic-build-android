@@ -119,5 +119,6 @@ install:
 script:
   - PLUGINS_ARG="--plugin /tmp/$PLUGIN"
   - FTS_ARG="--fileTransferServer http://sheltered-retreat-43956.herokuapp.com"
+  - if [ $PLATFORM = android-7.0 ]; then SKIP_APPIUM="--skipAppiumTests"; fi
   # run general tests and Appium tests separately for easier result identification
-  - node /tmp/paramedic/main.js --config periodic/$PLATFORM $PLUGINS_ARG $FTS_ARG --shouldUseSauce --buildName travis-periodic-$TRAVIS_JOB_NUMBER --skipAppium
+  - node /tmp/paramedic/main.js --config periodic/$PLATFORM $PLUGINS_ARG $FTS_ARG --shouldUseSauce --buildName travis-periodic-$TRAVIS_JOB_NUMBER $SKIP_APPIUM
