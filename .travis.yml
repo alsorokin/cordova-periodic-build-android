@@ -119,17 +119,20 @@ install:
   - git clone --depth=1 --branch=master https://github.com/apache/cordova-lib /tmp/cordova-lib
   - git clone --depth=1 --branch=master https://github.com/apache/cordova-js /tmp/cordova-js
   - git clone --depth=1 --branch=master https://github.com/apache/cordova-cli /tmp/cordova-cli
+  - git clone --depth=1 --branch=master https://github.com/apache/cordova-common /tmp/cordova-common
+  - git clone --depth=1 --branch=master https://github.com/apache/cordova-fetch /tmp/cordova-fetch
+  - git clone --depth=1 --branch=master https://github.com/apache/cordova-serve /tmp/cordova-serve
   - git clone --depth=1 --branch=master https://github.com/apache/cordova-create /tmp/cordova-create
   - pushd /tmp/cordova-js && npm install && npm link && popd
-  - pushd /tmp/cordova-lib/cordova-common && npm install && npm link && popd
-  - pushd /tmp/cordova-lib/cordova-fetch && npm install && npm link && popd
+  - pushd /tmp/cordova-common && npm install && npm link && popd
+  - pushd /tmp/cordova-fetch && npm install && npm link && popd
   - pushd /tmp/cordova-create && npm install && npm link && popd
-  - pushd /tmp/cordova-lib/cordova-serve && npm install && npm link && popd
-  - pushd /tmp/cordova-lib/cordova-lib && npm install && npm link && popd
+  - pushd /tmp/cordova-serve && npm install && npm link && popd
+  - pushd /tmp/cordova-lib && npm install && npm link && popd
   - pushd /tmp/cordova-cli && npm install && npm link && popd
-  - pushd /tmp/cordova-lib/cordova-fetch && npm link cordova-common && popd
+  - pushd /tmp/cordova-fetch && npm link cordova-common && popd
   - pushd /tmp/cordova-create && npm link cordova-common cordova-fetch && popd
-  - pushd /tmp/cordova-lib/cordova-lib && npm link cordova-common cordova-create cordova-fetch cordova-js cordova-serve && popd
+  - pushd /tmp/cordova-lib && npm link cordova-common cordova-create cordova-fetch cordova-js cordova-serve && popd
   - pushd /tmp/cordova-cli && npm link cordova-common cordova-create cordova-fetch cordova-js cordova-lib cordova-serve && popd
   - /tmp/cordova-cli/bin/cordova -v
 
@@ -137,6 +140,4 @@ script:
   - PLUGINS_ARG="--plugin /tmp/$PLUGIN"
   - FTS_ARG="--fileTransferServer http://sheltered-retreat-43956.herokuapp.com"
   - CLI_ARG="--cli /tmp/cordova-cli/bin/cordova"
-  - if [ $PLATFORM = android-7.0 ]; then SKIP_APPIUM="--skipAppiumTests"; fi
-  # run general tests and Appium tests separately for easier result identification
-  - node /tmp/paramedic/main.js --config periodic/$PLATFORM $PLUGINS_ARG $FTS_ARG $CLI_ARG --shouldUseSauce --buildName travis-periodic-$TRAVIS_JOB_NUMBER $SKIP_APPIUM
+  - node /tmp/paramedic/main.js --config periodic/$PLATFORM $PLUGINS_ARG $FTS_ARG $CLI_ARG --shouldUseSauce --buildName travis-periodic-$TRAVIS_JOB_NUMBER
