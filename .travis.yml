@@ -17,7 +17,7 @@ cache:
     - $HOME/.android/build-cache
 env:
   global:
-    - TRAVIS_NODE_VERSION=4
+    - TRAVIS_NODE_VERSION=6.11.2
   matrix:
     # android 4.4
     - PLATFORM=android-4.4 PLUGIN=cordova-plugin-battery-status
