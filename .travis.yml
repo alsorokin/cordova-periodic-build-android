@@ -108,7 +108,7 @@ before_install:
   - npm --version
   - gradle --version
   - npm cache clean -f
-  - echo y | android --silent update sdk --no-ui --all --filter platform-tools,tools,build-tools-26.0.0,android-26,android-25,extra-google-m2repository,extra-android-m2repository
+  - echo y | android --silent update sdk --no-ui --all --filter platform-tools,tools,build-tools-26.0.0,android-27,android-26,android-25,extra-google-m2repository,extra-android-m2repository
 
 install:
   - git clone --depth=1 --branch=master https://github.com/apache/cordova-paramedic && pushd cordova-paramedic && npm install && popd
